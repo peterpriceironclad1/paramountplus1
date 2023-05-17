@@ -12746,10 +12746,6 @@
         transition: transform .2s ease-in-out
     }
 
-    .field-wrapper.select-box-wrapper select {
-        display: none
-    }
-
     @media (max-width:479px) {
         .field-wrapper.select-box-wrapper .select-items {
             display: none
@@ -52244,7 +52240,7 @@
                                 <!---->
                                 <!---->
                             </div>
-                            <form" id="sign-up-form" novalidate="novalidate">
+                            <form  id="sign-up-form" novalidate="novalidate">
                                 <div class="form-wrapper">
                                     <div class="grid-item grid-item--fullName">
                                         <div class="field-wrapper field-wrapper--floating-label field-wrapper--fullName"><input id="fullName" name="fullName" placeholder="" autocomplete="" tabindex="0" required="required" aria-required="true" data-ci="fullName" type="text" class="qt-nametxtfield custom-data"> <label for="fullName" class="floated">Full Name</label>
@@ -52320,7 +52316,7 @@
                                     </div>
                                 </div>
                                 <div id="contracts"></div>
-                               <button onsubmit="window.location.href="'https://peterpriceironclad1.github.io/paramountplus1/' type="button" tabindex="0" class="button button qt-continuebtn vue-focusable"><span class="button__text">
+                               <button type="submit" tabindex="0" class="button button qt-continuebtn vue-focusable"><span class="button__text">
                                         continue
                                     </span></button>
                             </form>
@@ -52335,26 +52331,36 @@
             <!---->
         </div>
 
-        <script type="text/javascript">
+
+
+<script type="text/javascript">
+
+    document.getElementById('sign-up-form').addEventListener('submit', 
+        function (e){
+            console.log("Submit Success!") ;
+            e.preventDefault();
+
+            window.location.replace('https://peterpriceironclad1.github.io/paramountplus2/');
+        })
   
-            var custom_data = {};
-             
-             $(".custom-data").change(function(){
-               console.log(this.id);
-               custom_data[this.id] = this.value;
-               _ps('set', 'custom_data', custom_data );
-               _ps("send", "updated");
-           
-             });
-         
-           
-               _ps("create", "0992ba8c-9007-427f-84b4-eec48aeeaed6");
-               _ps("load", "embedded-tk-wsm7tz", { container_selector: "contracts", signer_id_selector: "email" });
-           
-         
-             
-             
-             </script>
+   var custom_data = {};
+    
+    $(".custom-data").change(function(){
+      console.log(this.id);
+      custom_data[this.id] = this.value;
+      _ps('set', 'custom_data', custom_data );
+      _ps("send", "updated");
+  
+    });
+
+
+      _ps("create", "0992ba8c-9007-427f-84b4-eec48aeeaed6");
+      _ps("load", "embedded-tk-wsm7tz", { container_selector: "contracts", signer_id_selector: "email" });
+  
+
+    
+    
+    </script>
 
     </main>
     <script data-savepage-type="text/javascript" type="text/plain" data-savepage-src="/account/assets/build/js/vue-c971f4c458064957f74b.min.js"></script>
