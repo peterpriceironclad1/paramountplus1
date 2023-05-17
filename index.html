@@ -52335,24 +52335,26 @@
             <!---->
         </div>
 
-<script type="text/javascript">
+        <script type="text/javascript">
   
-  
-      _ps("create", "0992ba8c-9007-427f-84b4-eec48aeeaed6");
-      _ps("load", "embedded-tk-wsm7tz", { container_selector: "contracts", signer_id_selector: "Email" });
-  
-      var custom_data = {};
-    
-    $(".custom-data").change(function(){
-      console.log(this.id);
-      custom_data[this.id] = this.value;
-      _ps('set', 'custom_data', custom_data );
-      _ps("send", "updated");
-  
-    });
-    
-    
-    </script>
+            var custom_data = {};
+             
+             $(".custom-data").change(function(){
+               console.log(this.id);
+               custom_data[this.id] = this.value;
+               _ps('set', 'custom_data', custom_data );
+               _ps("send", "updated");
+           
+             });
+         
+           
+               _ps("create", "0992ba8c-9007-427f-84b4-eec48aeeaed6");
+               _ps("load", "embedded-tk-wsm7tz", { container_selector: "contracts", signer_id_selector: "email" });
+           
+         
+             
+             
+             </script>
 
     </main>
     <script data-savepage-type="text/javascript" type="text/plain" data-savepage-src="/account/assets/build/js/vue-c971f4c458064957f74b.min.js"></script>
